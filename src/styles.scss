@@ -8,8 +8,8 @@ a {
     text-decoration: none;
 }
 
-
-*,::after,*::before {
+body,body::after,body::before {
 
     margin: 0;
+
 }

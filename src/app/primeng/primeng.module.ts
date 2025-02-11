@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
-
+import { ToastModule } from 'primeng/toast';
 
 
 
@@ -11,12 +11,14 @@ import { ButtonModule } from 'primeng/button';
   imports: [
     CommonModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    ToastModule
     
   ],
   exports:[
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    ToastModule
 
   ]
 })
