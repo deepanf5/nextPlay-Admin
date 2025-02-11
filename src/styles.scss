@@ -1,9 +1,15 @@
 @import "primeng/resources/primeng.css";
-@import url(../node_modules/primeng/resources/themes/bootstrap4-light-blue/theme.css);
+@import "primeng/resources/themes/bootstrap4-light-blue/theme.css";
 @import "primeicons/primeicons.css";
-@import url(../node_modules/primeflex/primeflex.scss);
+@import "primeflex/primeflex.scss";
 
 a {
 
     text-decoration: none;
+}
+
+
+*,::after,*::before {
+
+    margin: 0;
 }
