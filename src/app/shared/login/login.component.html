@@ -26,7 +26,7 @@
                         @if (loginForm.get('password')?.touched && loginForm.get('password')?.invalid) {
                             <p-messages [(value)]="passwordRequired" [enableService]="false" />
                       }
-                        <button pButton pRipple label="Sign In" icon="pi pi-sign-in" class="w-full"></button>
+                        <button pButton severity="primary" pRipple label="Sign In" icon="pi pi-sign-in" class="w-full bg-primary"></button>
                     </div>
                     <p-toast />
                 </form>

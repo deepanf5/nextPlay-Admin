@@ -8,6 +8,25 @@ a {
     text-decoration: none;
 }
 
+:root {
+    --primary-color:#009689;
+    --text-primary:#875a47;
+  }
+
+
+
+ .ui-button {
+    border-color: var(--primary-color); 
+    outline: none;
+  }
+  
+  /* Optional: Change outline color when button is focused */
+  .ui-button:focus {
+    border-color: #FF5733; /* Set your desired outline color when focused */
+    box-shadow: 0 0 5px #FF5733; /* Optional: Adds a glow effect when focused */
+  }
+  
+
 body,body::after,body::before {
 
     margin: 0;

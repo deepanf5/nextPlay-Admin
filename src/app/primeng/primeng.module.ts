@@ -4,6 +4,10 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
+import { AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
+import { SidebarModule } from 'primeng/sidebar';
+import { TreeModule } from 'primeng/tree';
 
 
 
@@ -14,14 +18,22 @@ import { MessagesModule } from 'primeng/messages';
     InputTextModule,
     ButtonModule,
     ToastModule,
-    MessagesModule
+    MessagesModule,
+    AvatarModule,
+    AvatarGroupModule,
+    SidebarModule,
+    TreeModule
     
   ],
   exports:[
     InputTextModule,
     ButtonModule,
     ToastModule,
-    MessagesModule
+    MessagesModule,
+    AvatarModule,
+    AvatarGroupModule,
+    SidebarModule,
+    TreeModule
 
   ]
 })
