@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
+import { MessagesModule } from 'primeng/messages';
 
 
 
@@ -12,13 +13,15 @@ import { ToastModule } from 'primeng/toast';
     CommonModule,
     InputTextModule,
     ButtonModule,
-    ToastModule
+    ToastModule,
+    MessagesModule
     
   ],
   exports:[
     InputTextModule,
     ButtonModule,
-    ToastModule
+    ToastModule,
+    MessagesModule
 
   ]
 })
