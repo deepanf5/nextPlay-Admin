@@ -8,6 +8,7 @@ import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { SidebarModule } from 'primeng/sidebar';
 import { TreeModule } from 'primeng/tree';
+import { BadgeModule } from 'primeng/badge';
 
 
 
@@ -22,7 +23,8 @@ import { TreeModule } from 'primeng/tree';
     AvatarModule,
     AvatarGroupModule,
     SidebarModule,
-    TreeModule
+    TreeModule,
+    BadgeModule
     
   ],
   exports:[
@@ -33,7 +35,8 @@ import { TreeModule } from 'primeng/tree';
     AvatarModule,
     AvatarGroupModule,
     SidebarModule,
-    TreeModule
+    TreeModule,
+    BadgeModule
 
   ]
 })
