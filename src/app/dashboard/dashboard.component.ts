@@ -6,7 +6,7 @@ import { CoreModule } from '../core/core.module';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [AheaderComponent,AsidebarComponent,CoreModule],
+  imports: [],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })

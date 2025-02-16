@@ -5,6 +5,7 @@ import { AllMoviesComponent } from './all-movies/all-movies.component';
 import { UsersComponent } from './users/users.component';
 import { PaymentdetailsComponent } from './paymentdetails/paymentdetails.component';
 import { AddmovieComponent } from './addmovie/addmovie.component';
+import { LayoutComponent } from './dashboard/layout/layout.component';
 
 
 export const routes: Routes = [
@@ -13,8 +14,12 @@ export const routes: Routes = [
     },
     {
         path:'dashboard',
-        component:DashboardComponent,
+        component:LayoutComponent,
         children:[
+            {
+                path:'',
+                component:DashboardComponent
+            },
             {
                 path:'movies',
                 component:AllMoviesComponent
