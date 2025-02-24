@@ -9,6 +9,9 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
 import { SidebarModule } from 'primeng/sidebar';
 import { TreeModule } from 'primeng/tree';
 import { BadgeModule } from 'primeng/badge';
+import { CardModule } from 'primeng/card';
+import { PanelModule } from 'primeng/panel';
+
 
 
 
@@ -24,7 +27,9 @@ import { BadgeModule } from 'primeng/badge';
     AvatarGroupModule,
     SidebarModule,
     TreeModule,
-    BadgeModule
+    BadgeModule,
+    CardModule,
+    PanelModule
     
   ],
   exports:[
@@ -36,7 +41,9 @@ import { BadgeModule } from 'primeng/badge';
     AvatarGroupModule,
     SidebarModule,
     TreeModule,
-    BadgeModule
+    BadgeModule,
+    CardModule,
+    PanelModule
 
   ]
 })
