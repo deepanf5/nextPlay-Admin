@@ -92,3 +92,44 @@
 </section>
 
 <!-- Graph -->
+
+<div class="grid">
+    <div class="col-12 md:col-6 lg:col-6">
+        <div class="p-3 border-round-sm  h-25rem surface-border border-1 overflow-hidden">
+            <p>most watched movies</p>
+            <div>
+                <p-table [value]="movies" [tableStyle]="{ 'min-width': '50rem' }">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Rating</th>
+                            <th>Director</th>
+                            <th>year</th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td class="p-0 m-0">
+                                <p-avatar 
+                              
+                                [image]="product.image" 
+                                size="xlarge"
+                                badgeSize="xlarge" />
+                            </td>
+                            <td class="p-0 m-0">{{ product.name }}</td>
+                            <td class="p-0 m-0">{{ product.rating }}</td>
+                            <td class="p-0 m-0">{{ product.director }}</td>
+                            <td class="p-0 m-0">{{ product.year }}</td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 md:col-6 lg:col-6">
+        <div class="text-center p-3 border-round-sm  font-bold h-25rem surface-border border-1">
+            <h2></h2>
+        </div>
+    </div>
+</div>

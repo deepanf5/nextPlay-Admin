@@ -11,6 +11,7 @@ import { TreeModule } from 'primeng/tree';
 import { BadgeModule } from 'primeng/badge';
 import { CardModule } from 'primeng/card';
 import { PanelModule } from 'primeng/panel';
+import { TableModule } from 'primeng/table';
 
 
 
@@ -29,7 +30,8 @@ import { PanelModule } from 'primeng/panel';
     TreeModule,
     BadgeModule,
     CardModule,
-    PanelModule
+    PanelModule,
+    TableModule
     
   ],
   exports:[
@@ -43,7 +45,8 @@ import { PanelModule } from 'primeng/panel';
     TreeModule,
     BadgeModule,
     CardModule,
-    PanelModule
+    PanelModule,
+    TableModule
 
   ]
 })
