@@ -1,5 +1,5 @@
 <section class="dashboard">
-    <div class="grid lg:pt-7">
+    <div class="grid lg:pt-5">
 
         <div class="col-12 md:col-6 lg:col-3">
             <div class="p-3 h-8rem border-round-sm bg-primary-reverse surface-border border-1">
@@ -10,7 +10,8 @@
                             <i class="pi pi-play mt-2" style="font-size: 2rem" style="color: cadetblue"></i>
                             <i class="pi pi-play mt-2" style="font-size: 2rem" style="color: cadetblue"></i>
                             <i class="pi pi-play mt-2" style="font-size: 2rem" style="color: cadetblue"></i>
-                            <i class="pi pi-chevron-right mt-2" style="font-size: 2rem" style="color: cadetblue"></i>
+                            <i class="pi pi-play mt-2" style="font-size: 2rem" style="color: cadetblue"></i>
+                            <!-- <i class="pi pi-chevron-right mt-2" style="font-size: 2rem" style="color: cadetblue"></i> -->
                         </div>
                     </div>
                     <div class="col">
@@ -56,6 +57,7 @@
                             <i class="pi pi-chart-line ml-1" style="font-size: 2.5rem" style="color: cadetblue"></i>
                             <i class="pi pi-chart-line ml-1" style="font-size: 2.5rem" style="color: cadetblue"></i>
                             <i class="pi pi-chart-line ml-1" style="font-size: 2.5rem" style="color: cadetblue"></i>
+                            <i class="pi pi-chart-line ml-1" style="font-size: 2.5rem" style="color: cadetblue"></i>
                         </div>
                     </div>
                     <div class="col">
@@ -93,12 +95,13 @@
 
 <!-- Graph -->
 
-<div class="grid">
+<!-- <div class="grid">
     <div class="col-12 md:col-6 lg:col-6">
-        <div class="p-3 border-round-sm  h-25rem surface-border border-1 overflow-hidden">
-            <p>most watched movies</p>
+        <div class="p-3 border-round-sm  h-30rem surface-border border-1 overflow-hidden">
+            <p class="capitalize font-bold text-cyan-900">most watched movies</p>
             <div>
-                <p-table [value]="movies" [tableStyle]="{ 'min-width': '50rem' }">
+                <p-table [value]="movies"
+                 [tableStyle]="{ 'min-width': '50rem' }">
                     <ng-template pTemplate="header">
                         <tr>
                             <th>Image</th>
@@ -120,7 +123,7 @@
                             <td class="p-0 m-0">{{ product.name }}</td>
                             <td class="p-0 m-0">{{ product.rating }}</td>
                             <td class="p-0 m-0">{{ product.director }}</td>
-                            <td class="p-0 m-0">{{ product.year }}</td>
+                            <td class="p-0 m-0 mb-2">{{ product.year }}</td>
                         </tr>
                     </ng-template>
                 </p-table>
@@ -131,5 +134,49 @@
         <div class="text-center p-3 border-round-sm  font-bold h-25rem surface-border border-1">
             <h2></h2>
         </div>
+    </div>
+</div> -->
+
+
+<div class="grid pt-4">
+    <div class="col-12 md:col-6 lg:col-6">
+        <div class="text-center p-3 border-round-sm  surface-border border-1  font-bold">
+            <p class="text-left capitalize font-bold text-cyan-900">most watched movies</p>
+            
+<p-table
+[value]="movies"
+[paginator]="true"
+[rows]="5"
+[tableStyle]="{ 'min-width': '50rem' }"
+>
+<ng-template pTemplate="header">
+    <tr>
+        <th style="width:25%">Image</th>
+        <th style="width:25%">Name</th>
+        <th style="width:25%">Genre</th>
+        <th style="width:25%">Director</th>
+        <th style="width:25%">Year</th>
+    </tr>
+</ng-template>
+<ng-template pTemplate="body" let-movies>
+    <tr>
+        <td class="p-0 m-0">
+            <p-avatar 
+                              
+            [image]="movies.image" 
+            size="xlarge"
+            badgeSize="xlarge" />
+        </td>
+        <td class="p-0 m-0 font-medium">{{ movies.name.slice(0,15)}}..</td>
+        <td class="p-0 m-0">{{ movies.genre }}</td>
+        <td class="p-0 m-0">{{ movies.director }}</td>
+        <td class="p-0 m-0 text-center">{{ movies.year }}</td>
+    </tr>
+</ng-template>
+</p-table>
+        </div>
+    </div>
+    <div class="col-12 md:col-6 lg:col-6">
+        <div class="text-center p-3 border-round-sm  font-bold h-27rem">col-12 md:col-6 lg:col-3</div>
     </div>
 </div>

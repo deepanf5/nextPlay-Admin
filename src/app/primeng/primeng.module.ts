@@ -12,6 +12,7 @@ import { BadgeModule } from 'primeng/badge';
 import { CardModule } from 'primeng/card';
 import { PanelModule } from 'primeng/panel';
 import { TableModule } from 'primeng/table';
+import { PaginatorModule } from 'primeng/paginator';
 
 
 
@@ -31,7 +32,8 @@ import { TableModule } from 'primeng/table';
     BadgeModule,
     CardModule,
     PanelModule,
-    TableModule
+    TableModule,
+    PaginatorModule
     
   ],
   exports:[
@@ -46,7 +48,8 @@ import { TableModule } from 'primeng/table';
     BadgeModule,
     CardModule,
     PanelModule,
-    TableModule
+    TableModule,
+    PaginatorModule
 
   ]
 })

@@ -1,5 +1,32 @@
 :host ::ng-deep .p-avatar  {
-    width: 40%;
-    height: 50px;
+    width: 50%;
     object-fit:cover;
+}
+
+
+:host ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+:host ::ng-deep .p-paginator .p-paginator-pages {
+    color: var(--primary-color);
+}
+
+:host ::ng-deep .p-paginator-first   {
+    color: var(--primary-color);
+}
+:host ::ng-deep .p-paginator-next {
+    color: var(--primary-color);
+}
+
+:host ::ng-deep .p-paginator-last {
+    color: var(--primary-color);
+}
+:host ::ng-deep .p-paginator-prev {
+    color: var(--primary-color);
+}
+:host ::ng-deep .p-paginator-rpp-options {
+    color: var(--primary-color);
 }
