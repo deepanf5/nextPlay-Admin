@@ -104,7 +104,7 @@ export class DashboardComponent implements OnInit{
               {
                   type: 'bar',
                   label: 'Dataset 1',
-                  backgroundColor: ['rgba(95, 158, 160, 0.65)','rgba(95, 158, 160, 1)','rgba(95, 158, 160, 1),rgba(95, 158, 160, 1)'],
+                  backgroundColor: ['rgba(87, 96, 111, 0.59)','rgba(87, 96, 111, 0.81)','rgba(87, 96, 111, 0.8)','rgba(87, 96, 111, 0.81)'],
                   borderColor: ['rgb(255, 159, 64)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(153, 102, 255)'],
                   data: [50, 25, 12, 48, 90, 76, 42],
                   borderRadius:10
@@ -112,7 +112,7 @@ export class DashboardComponent implements OnInit{
               {
                   type: 'bar',
                   label: 'Dataset 2',
-                  backgroundColor: ['rgba(95, 158, 160, 0.65)','rgba(95, 158, 160, 1)','rgba(95, 158, 160, 1),rgba(95, 158, 160, 1)'],
+                  backgroundColor: ['rgba(87, 96, 111, 0.59)','rgba(87, 96, 111, 0.72)','rgba(87, 96, 111, 0.73)','rgba(87, 96, 111, 0.62)'],
                     borderColor: ['rgb(255, 159, 64)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(153, 102, 255)'],
                   // backgroundColor: documentStyle.getPropertyValue('--green-600'),
                   data: [21, 84, 24, 75, 37, 65, 34],
@@ -121,8 +121,8 @@ export class DashboardComponent implements OnInit{
               {
                   type: 'bar',
                   label: 'Dataset 3',
-                  backgroundColor: ['rgba(95, 158, 160, 0.89)','rgba(95, 158, 160, 0.79)','rgba(95, 158, 160, 0.66),rgba(95, 158, 160, 0.75)'],
-                    borderColor: ['rgb(255, 159, 64)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(153, 102, 255)'],
+                  backgroundColor: ['rgba(87, 96, 111, 0.81)','rgba(87, 96, 111, 0.81)','rgba(87, 96, 111, 0.88)','rgba(87, 96, 111, 0.4)'],
+                   borderColor: ['rgb(255, 159, 64)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(153, 102, 255)'],
                   // backgroundColor: documentStyle.getPropertyValue('--yellow-500'),
                   data: [41, 52, 24, 74, 23, 21, 32],
                   borderRadius:10
