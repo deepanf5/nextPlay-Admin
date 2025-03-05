@@ -3,6 +3,8 @@ import { AheaderComponent } from './aheader/aheader.component';
 import { AsidebarComponent } from './asidebar/asidebar.component';
 import { CoreModule } from '../core/core.module';
 import { PrimengModule } from '../primeng/primeng.module';
+import { ChartModule } from 'primeng/chart';
+import { Tooltip } from 'chart.js/dist/plugins/plugin.tooltip';
 
 interface PageEvent {
   first: number;
@@ -14,7 +16,7 @@ interface PageEvent {
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [PrimengModule],
+  imports: [PrimengModule,ChartModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
@@ -22,9 +24,9 @@ export class DashboardComponent implements OnInit{
   movies:any = [];
 
   first: number = 0;
-
-    rows: number = 10;
-
+  rows: number = 10;
+  basicData:any;
+  options:any
   
   ngOnInit(): void {
 
@@ -87,6 +89,85 @@ export class DashboardComponent implements OnInit{
         genre:'Action/Sci-fi'
       }
     ]
+
+
+    // chart data 
+
+    const documentStyle = getComputedStyle(document.documentElement);
+        const textColor = documentStyle.getPropertyValue('--text-color');
+        const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
+        const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
+
+        this.basicData = {
+          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+          datasets: [
+              {
+                  type: 'bar',
+                  label: 'Dataset 1',
+                  backgroundColor: ['rgba(95, 158, 160, 0.65)','rgba(95, 158, 160, 1)','rgba(95, 158, 160, 1),rgba(95, 158, 160, 1)'],
+                  borderColor: ['rgb(255, 159, 64)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(153, 102, 255)'],
+                  data: [50, 25, 12, 48, 90, 76, 42],
+                  borderRadius:10
+              },
+              {
+                  type: 'bar',
+                  label: 'Dataset 2',
+                  backgroundColor: ['rgba(95, 158, 160, 0.65)','rgba(95, 158, 160, 1)','rgba(95, 158, 160, 1),rgba(95, 158, 160, 1)'],
+                    borderColor: ['rgb(255, 159, 64)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(153, 102, 255)'],
+                  // backgroundColor: documentStyle.getPropertyValue('--green-600'),
+                  data: [21, 84, 24, 75, 37, 65, 34],
+                  borderRadius:10
+              },
+              {
+                  type: 'bar',
+                  label: 'Dataset 3',
+                  backgroundColor: ['rgba(95, 158, 160, 0.89)','rgba(95, 158, 160, 0.79)','rgba(95, 158, 160, 0.66),rgba(95, 158, 160, 0.75)'],
+                    borderColor: ['rgb(255, 159, 64)', 'rgb(75, 192, 192)', 'rgb(54, 162, 235)', 'rgb(153, 102, 255)'],
+                  // backgroundColor: documentStyle.getPropertyValue('--yellow-500'),
+                  data: [41, 52, 24, 74, 23, 21, 32],
+                  borderRadius:10
+              }
+          ]
+      };
+
+      this.options = {
+          maintainAspectRatio: false,
+          aspectRatio: 0.8,
+          plugins: {
+              tooltip: {
+                  mode: 'index',
+                  intersect: false
+              },
+              legend: {
+                  labels: {
+                      color: textColor
+                  }
+              }
+          },
+          scales: {
+              x: {
+                  stacked: true,
+                  ticks: {
+                      color: textColorSecondary
+                  },
+                  grid: {
+                      color: surfaceBorder,
+                      drawBorder: false,
+                      display:false
+                  }
+              },
+              y: {
+                  stacked: true,
+                  ticks: {
+                      color: textColorSecondary
+                  },
+                  grid: {
+                      color: surfaceBorder,
+                      drawBorder: false,
+                  }
+              }
+          }
+      };
 
     
   }

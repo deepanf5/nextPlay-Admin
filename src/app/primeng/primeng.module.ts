@@ -13,6 +13,8 @@ import { CardModule } from 'primeng/card';
 import { PanelModule } from 'primeng/panel';
 import { TableModule } from 'primeng/table';
 import { PaginatorModule } from 'primeng/paginator';
+import { ChartModule } from 'primeng/chart';
+
 
 
 
@@ -33,7 +35,8 @@ import { PaginatorModule } from 'primeng/paginator';
     CardModule,
     PanelModule,
     TableModule,
-    PaginatorModule
+    PaginatorModule,
+    ChartModule
     
   ],
   exports:[
@@ -49,7 +52,8 @@ import { PaginatorModule } from 'primeng/paginator';
     CardModule,
     PanelModule,
     TableModule,
-    PaginatorModule
+    PaginatorModule,
+    ChartModule
 
   ]
 })

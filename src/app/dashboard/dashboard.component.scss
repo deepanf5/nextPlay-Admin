@@ -30,3 +30,16 @@
 :host ::ng-deep .p-paginator-rpp-options {
     color: var(--primary-color);
 }
+
+
+.line {
+    text-align: left;
+    padding: 1rem 1rem;
+    border: 1px solid #dee2e6;
+    border-width: 1px 0 2px 0;
+    font-weight: 600;
+    color: #212529;
+    background: #ffffff;
+    transition: box-shadow 0.15s;
+
+}
