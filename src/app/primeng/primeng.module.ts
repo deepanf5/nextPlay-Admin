@@ -14,6 +14,10 @@ import { PanelModule } from 'primeng/panel';
 import { TableModule } from 'primeng/table';
 import { PaginatorModule } from 'primeng/paginator';
 import { ChartModule } from 'primeng/chart';
+import { TagModule } from 'primeng/tag';
+import { RatingModule } from 'primeng/rating';
+import { InputIconModule } from 'primeng/inputicon';
+import { IconFieldModule } from 'primeng/iconfield';
 
 
 
@@ -36,7 +40,11 @@ import { ChartModule } from 'primeng/chart';
     PanelModule,
     TableModule,
     PaginatorModule,
-    ChartModule
+    ChartModule,
+    TagModule,
+    RatingModule,
+    InputIconModule,
+    IconFieldModule
     
   ],
   exports:[
@@ -53,7 +61,11 @@ import { ChartModule } from 'primeng/chart';
     PanelModule,
     TableModule,
     PaginatorModule,
-    ChartModule
+    ChartModule,
+    TagModule,
+    RatingModule,
+    InputIconModule,
+    IconFieldModule
 
   ]
 })
