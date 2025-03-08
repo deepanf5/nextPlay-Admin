@@ -9,8 +9,8 @@ a {
 }
 
 :root {
-    --primary-color:#57606f ;
-    --text-primary:#875a47;
+    --primary-color:#57606f;
+    --secondary-color:#fac307;
   }
 
 
@@ -30,14 +30,20 @@ a {
 body,body::after,body::before {
 
     margin: 0;
-    
 
 }
 
 
 
 
+body {
+  --sb-track-color: white;
+  --sb-thumb-color:var(--primary-color);
+  --sb-size: 5px;
+}
+
 ::-webkit-scrollbar {
+  height:var(--sb-size);
   width: var(--sb-size)
 }
 
@@ -58,3 +64,61 @@ body,body::after,body::before {
                      var(--sb-track-color);
   }
 }
+
+
+
+
+ .p-rating .p-rating-item.p-rating-item-active .p-rating-icon {
+  color: var(--secondary-color);
+}
+
+
+ .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+ .p-paginator .p-paginator-pages {
+  color: var(--primary-color);
+}
+
+ .p-paginator-first   {
+  color: var(--primary-color);
+}
+ .p-paginator-next {
+  color: var(--primary-color);
+}
+
+ .p-paginator-last {
+  color: var(--primary-color);
+}
+ .p-paginator-prev {
+  color: var(--primary-color);
+}
+ .p-paginator-rpp-options {
+  color: var(--primary-color);
+}
+
+.p-datatable .p-sortable-column.p-highlight {
+
+  color: var(--primary-color);
+}
+
+.p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon {
+  color: var(--primary-color);
+}
+.p-paginator .p-paginator-pages .p-paginator-page {
+  color: var(--secondary-color);
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight.p-focus {
+  background-color: var(--primary-color);
+}
+
+.p-focus,.p-button {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.1rem var(--primary-color);
+}
+
+
