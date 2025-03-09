@@ -67,6 +67,10 @@ body {
 
 
 
+.p-datatable .p-datatable-header  {
+  background: none;
+}
+
 
  .p-rating .p-rating-item.p-rating-item-active .p-rating-icon {
   color: var(--secondary-color);
@@ -116,9 +120,19 @@ body {
   background-color: var(--primary-color);
 }
 
-.p-focus,.p-button {
+.p-focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 0.1rem var(--primary-color);
+  box-shadow: 0 0 0 0.2px var(--primary-color);
 }
+
+
+.p-button.p-button-outlined {
+  color: var(--primary-color) ;
+}
+
+
+// .p-tag  {
+//   background:var(--primary-color);
+// }
 
 
