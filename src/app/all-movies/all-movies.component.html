@@ -1,11 +1,11 @@
-<section class="all-movies">
+<section class="all-movies overflow-x-scroll h-screen">
     <p-table  #dt2
     [value]="movies"
     [tableStyle]="{ 'min-width': '50rem' }"
     sortMode="multiple"
     [paginator]="true"
     [rows]="10"
-    [rowsPerPageOptions]="[10, 25, 50]"
+    [rowsPerPageOptions]="[6, 25, 50]"
     [globalFilterFields]="['name', 'genre', 'Director', 'Rating','Year']">
 
     <ng-template pTemplate="caption">
@@ -38,22 +38,27 @@
                 <th pSortableColumn="rating" style="width:20%">
                     Rating <p-sortIcon field="rating" />
                 </th>
+                <th  style="width:20%">
+                    Action  
+                </th>
             </tr>
         </ng-template>
         
         <ng-template pTemplate="body" let-movie>
             <tr>
-                <td>
-                    <p-avatar                        
+                <td class="pl-5">
+                    <p-avatar                       
                     [image]="movie.image" 
                     size="xlarge"
-                    badgeSize="xlarge" />
+                     />
                 </td>
                 <td>{{ movie.name }}</td>
                 <td>{{ movie.genre }}</td>
                 <td>{{ movie.director }}</td>
                 <td>{{ movie.year }}</td>
-                <td><p-rating [(ngModel)]="movie.rating" stars="10" [readonly]="true" [cancel]="false"  /></td>
+                <td><p-rating [(ngModel)]="movie.rating" stars="5" [readonly]="true" [cancel]="false"  /></td>
+                <td><p-button  size="small" icon="pi pi-pencil" [text]="true" severity="secondary" /></td>
+
             </tr>
         </ng-template>
     </p-table>

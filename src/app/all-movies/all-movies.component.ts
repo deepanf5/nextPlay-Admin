@@ -2,6 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { PrimengModule } from '../primeng/primeng.module';
 import { Table } from 'primeng/table';
 
+interface Movies {
+  name:string,
+  rating:number,
+  director:string,
+  year:string,
+  image:string,
+  genre:string
+}
+
 @Component({
   selector: 'app-all-movies',
   standalone: true,
@@ -11,7 +20,7 @@ import { Table } from 'primeng/table';
 })
 export class AllMoviesComponent  implements OnInit{
 
-  movies:any;
+  movies!:Movies[];
   loading: boolean = true;
   searchValue!: string;
 
@@ -19,7 +28,7 @@ export class AllMoviesComponent  implements OnInit{
     this.movies = [
       {
         name:'Birds of Prey and the Fantabulous Emancipation of One Harley Quinn',
-        rating:6.0,
+        rating:3.0,
         director:'Cathy Yan',
         year:'2020',
         image:"https://wallpapers.com/images/high/birds-of-prey-quality-harley-photograph-v7jqp0xxf0qh00aj.webp",
@@ -27,7 +36,7 @@ export class AllMoviesComponent  implements OnInit{
       },
       {
         name:'Mufasa: The Lion King',
-        rating:6.7,
+        rating:3.7,
         director:'Barry Jenkins',
         year:'2024',
         image:"https://4kwallpapers.com/images/walls/thumbs_3t/16612.jpg",
@@ -36,7 +45,7 @@ export class AllMoviesComponent  implements OnInit{
       },
       {
         name:'Wall E',
-        rating:8.4,
+        rating:4.4,
         director:'Andrew Stanton',
         year:'2008',
         image:"https://images.alphacoders.com/136/thumb-440-1363724.webp",
@@ -44,7 +53,7 @@ export class AllMoviesComponent  implements OnInit{
       },
       {
         name:'Wolverine & Dead pool',
-        rating:7.6,
+        rating:3.6,
         director:'Shawn Levy',
         year:'2024',
         image:"https://images3.alphacoders.com/138/thumb-1920-1388592.jpg",
@@ -52,7 +61,7 @@ export class AllMoviesComponent  implements OnInit{
       },
       {
         name:'Transformer one',
-        rating:7.6,
+        rating:3.6,
         director:'Josh Cooley',
         year:'2024',
         image:"https://images3.alphacoders.com/136/thumb-1920-1363121.jpeg",
@@ -60,7 +69,7 @@ export class AllMoviesComponent  implements OnInit{
       },
       {
         name:'Transformer one',
-        rating:7.6,
+        rating:3.6,
         director:'Josh Cooley',
         year:'2024',
         image:"https://images3.alphacoders.com/136/thumb-1920-1363121.jpeg",
@@ -68,12 +77,13 @@ export class AllMoviesComponent  implements OnInit{
       },
       {
         name:'Transformer one',
-        rating:7.6,
+        rating:3.6,
         director:'Josh Cooley',
         year:'2024',
         image:"https://images3.alphacoders.com/136/thumb-1920-1363121.jpeg",
         genre:'Action/Sci-fi'
-      }
+      },
+      
     ]
   
   }
