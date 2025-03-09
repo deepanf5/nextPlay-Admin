@@ -33,6 +33,9 @@
                 <th pSortableColumn="email" style="width:15%">
                     Email <p-sortIcon field="email" />
                 </th>
+                <th pSortableColumn="paymentMethod" style="width:18%">
+                    Paymethod Method <p-sortIcon field="paymentMethod" />
+                </th>
                 <th pSortableColumn="phone_number" style="width:15%">
                     PhoneNumber <p-sortIcon field="phone_number" />
                 </th>
@@ -48,6 +51,7 @@
                 <td>{{ user.first_name }}</td>
                 <td>{{ user.last_name }}</td>
                 <td>{{ user.email }}</td>
+                <td>{{ user.paymentMethod }}</td>
                 <td>{{user.phone_number}}</td>
                 <td>
                     <p-tag  value="{{user.account_status}}" [rounded]="true" />
