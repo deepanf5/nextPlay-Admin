@@ -23,11 +23,27 @@
 
 .Basic {
     border-radius: 10%;
-    background-color: #AAB7b7;
+    background-color: var(--primary-color);
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.25rem 0.4rem;
     border-radius: 4px;
+}
 
+.active {
+    border-radius: 10%;
+    background-color:#009432;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.4rem;
+    border-radius: 4px;
+}
+.inactive {
+    border-radius: 10%;
+    background-color:#eb2f06;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.4rem;
+    border-radius: 4px;
 
 }
