@@ -1,1 +1,60 @@
-<p>paymentdetails works!</p>
+<section class="all-movies overflow-x-scroll h-screen">
+    <p-table  #dt2
+    [value]="users"
+    [tableStyle]="{ 'min-width': '50rem' }"
+    sortMode="multiple"
+    [paginator]="true"
+    [rows]="10"
+    [rowsPerPageOptions]="[6, 25, 50]"
+    [globalFilterFields]="['user_id', 'first_name', 'last_name', 'email','phone_number','account_status']">
+
+    <ng-template pTemplate="caption">
+        <div class="flex">
+            <p-button label="Clear" [outlined]="true" icon="pi pi-filter-slash" (onClick)="clear(dt2)" />
+            <span class="p-input-icon-left ml-auto">
+                <i class="pi pi-search"></i>
+                <input pInputText type="text" [(ngModel)]="searchValue" (input)="dt2.filterGlobal(searchValue, 'contains')" placeholder="Search keyword" />
+            </span>
+        </div>
+    </ng-template>
+   
+        <ng-template pTemplate="header">
+            <tr>
+
+                <th pSortableColumn="user_id" style="width:15%">
+                    User Id <p-sortIcon field="user_id" />
+                </th>
+                <th pSortableColumn="first_name" style="width:15%">
+                    First Name <p-sortIcon field="first_name" />
+                </th>
+                <th pSortableColumn="last_name" style="width:15%">
+                    last Name <p-sortIcon field="last_name" />
+                </th>
+                <th pSortableColumn="email" style="width:15%">
+                    Email <p-sortIcon field="email" />
+                </th>
+                <th pSortableColumn="phone_number" style="width:15%">
+                    PhoneNumber <p-sortIcon field="phone_number" />
+                </th>
+                <th pSortableColumn="account_status" style="width:15%">
+                     Status <p-sortIcon field="account_status" />
+                </th>
+            </tr>
+        </ng-template>
+        
+        <ng-template pTemplate="body" let-user>
+            <tr>
+                <td>{{ user.user_id}}</td>
+                <td>{{ user.first_name }}</td>
+                <td>{{ user.last_name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{user.phone_number}}</td>
+                <td>
+                    <p-tag  value="{{user.account_status}}" [rounded]="true" />
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</section>
+
+
