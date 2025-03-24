@@ -1,7 +1,7 @@
 <section class="all-movies overflow-x-scroll h-screen">
     <p-table  #dt2
     [value]="users"
-    [tableStyle]="{ 'min-width': '50rem' }"
+    [tableStyle]="{ 'min-width': '150rem' }"
     sortMode="multiple"
     [paginator]="true"
     [rows]="10"
@@ -24,22 +24,28 @@
                 <th pSortableColumn="user_id" style="width:10%">
                     User Id <p-sortIcon field="user_id" />
                 </th>
-                <th pSortableColumn="first_name" style="width:15%">
+                <th pSortableColumn="first_name" style="width:10%">
                     First Name <p-sortIcon field="first_name" />
                 </th>
-                <th pSortableColumn="last_name" style="width:15%">
+                <th pSortableColumn="last_name" style="width:10%">
                     last Name <p-sortIcon field="last_name" />
+                </th>
+                <th pSortableColumn="member_ship" style="width:10%">
+                    MemberShip <p-sortIcon field="member_ship" />
                 </th>
                 <th pSortableColumn="email" style="width:15%">
                     Email <p-sortIcon field="email" />
                 </th>
-                <th pSortableColumn="paymentMethod" style="width:18%">
+                <th pSortableColumn="paymentMethod" style="width:15%">
                     Paymethod Method <p-sortIcon field="paymentMethod" />
+                </th>
+                <th pSortableColumn="amount" style="width:10%">
+                    Paid Amount <p-sortIcon field="amount" />
                 </th>
                 <th pSortableColumn="phone_number" style="width:15%">
                     PhoneNumber <p-sortIcon field="phone_number" />
                 </th>
-                <th pSortableColumn="account_status" style="width:15%">
+                <th pSortableColumn="account_status" style="width:18%">
                      Status <p-sortIcon field="account_status" />
                 </th>
             </tr>
@@ -50,8 +56,10 @@
                 <td>{{ user.user_id}}</td>
                 <td>{{ user.first_name }}</td>
                 <td>{{ user.last_name }}</td>
+                <td class="{{user.member_ship}}">{{ user.member_ship }}</td>
                 <td>{{ user.email }}</td>
                 <td>{{ user.paymentMethod }}</td>
+                <td>{{ user.amount }}</td>
                 <td>{{user.phone_number}}</td>
                 <td>
                     <p-tag severity="success"  value="{{user.account_status}}" [rounded]="true" />

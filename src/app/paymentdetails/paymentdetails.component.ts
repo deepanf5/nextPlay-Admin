@@ -10,6 +10,8 @@ interface Users {
     email: string,
     phone_number: string,
     paymentMethod:string,
+    amount:string,
+    member_ship:string,
     address: {
       street: string,
       city: string,
@@ -18,7 +20,8 @@ interface Users {
       country: string
     },
     account_status: string,
-    registration_date: string
+    registration_date: string,
+    
 }
 
 @Component({
@@ -41,9 +44,12 @@ export class PaymentdetailsComponent {
             user_id: "12345",
             first_name: "John",
             paymentMethod:'cerdit card',
+            
             last_name: "Doe",
             email: "john.doe@example.com",
             phone_number: "+1234567890",
+            amount:'30',
+            member_ship:'Prime',
             address: {
               street: "123 Main St",
               city: "Springfield",
@@ -61,6 +67,8 @@ export class PaymentdetailsComponent {
             email: "jane.smith@example.com",
             phone_number: "+1987654321",
             paymentMethod:'cerdit card',
+            amount:'30',
+            member_ship:'Prime',
             address: {
               street: "456 Elm St",
               city: "Shelbyville",
@@ -78,6 +86,8 @@ export class PaymentdetailsComponent {
             email: "alice.johnson@example.com",
             phone_number: "+1122334455",
             paymentMethod:'cerdit card',
+            amount:'30',
+            member_ship:'Prime',
             address: {
               street: "789 Oak St",
               city: "Smalltown",
@@ -95,6 +105,8 @@ export class PaymentdetailsComponent {
             email: "bob.williams@example.com",
             phone_number: "+1222333444",
             paymentMethod:'payPal',
+            amount:'20',
+            member_ship:'Elite',
             address: {
               street: "321 Pine St",
               city: "Capitol City",
@@ -112,6 +124,8 @@ export class PaymentdetailsComponent {
             email: "charlie.brown@example.com",
             phone_number: "+1444555666",
             paymentMethod:'google',
+            amount:'20',
+            member_ship:'Elite',
             address: {
               street: "987 Maple St",
               city: "Midtown",
@@ -129,6 +143,8 @@ export class PaymentdetailsComponent {
             email: "david.davis@example.com",
             phone_number: "+1555666777",
             paymentMethod:'google',
+            amount:'20',
+            member_ship:'Elite',
             address: {
               street: "654 Birch St",
               city: "Eastwood",
@@ -146,6 +162,8 @@ export class PaymentdetailsComponent {
             email: "eva.miller@example.com",
             phone_number: "+1666777888",
             paymentMethod:'google',
+            amount:'5',
+            member_ship:'Basic',
             address: {
               street: "741 Cedar St",
               city: "Westtown",
@@ -163,6 +181,8 @@ export class PaymentdetailsComponent {
             email: "frank.garcia@example.com",
             phone_number: "+1777888999",
             paymentMethod:'google',
+            amount:'5',
+            member_ship:'Basic',
             address: {
               street: "852 Redwood St",
               city: "Lakeside",
@@ -180,6 +200,8 @@ export class PaymentdetailsComponent {
             email: "grace.martinez@example.com",
             phone_number: "+1888999000",
             paymentMethod:'google',
+            amount:'5',
+            member_ship:'Basic',
             address: {
               street: "963 Willow St",
               city: "Greenfield",
@@ -197,6 +219,8 @@ export class PaymentdetailsComponent {
             email: "hank.rodriguez@example.com",
             phone_number: "+1999000111",
             paymentMethod:'payPal',
+            amount:'5',
+            member_ship:'Basic',
             address: {
               street: "741 Chestnut St",
               city: "Riverdale",
