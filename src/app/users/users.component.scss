@@ -3,7 +3,7 @@
 }
 .Elite {
     border-radius: 10%;
-    background-color: #2E4156;
+    color: #2E4156;
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.25rem 0.4rem;
@@ -13,7 +13,7 @@
   }
 .Prime  {
     border-radius: 10%;
-    background-color: var(--secondary-color);
+    color: var(--secondary-color);
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.25rem 0.4rem;
@@ -23,7 +23,7 @@
 
 .Basic {
     border-radius: 10%;
-    background-color: var(--primary-color);
+    color: var(--primary-color);
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.25rem 0.4rem;
@@ -32,7 +32,7 @@
 
 .active {
     border-radius: 10%;
-    background-color:#009432;
+    color:#009432;
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.25rem 0.4rem;
@@ -40,7 +40,8 @@
 }
 .inactive {
     border-radius: 10%;
-    background-color:#eb2f06;
+    // background-color:#eb2f06;
+    color: #eb2f06;
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.25rem 0.4rem;

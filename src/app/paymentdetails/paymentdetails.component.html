@@ -21,7 +21,7 @@
         <ng-template pTemplate="header">
             <tr>
 
-                <th pSortableColumn="user_id" style="width:15%">
+                <th pSortableColumn="user_id" style="width:10%">
                     User Id <p-sortIcon field="user_id" />
                 </th>
                 <th pSortableColumn="first_name" style="width:15%">
@@ -54,7 +54,7 @@
                 <td>{{ user.paymentMethod }}</td>
                 <td>{{user.phone_number}}</td>
                 <td>
-                    <p-tag  value="{{user.account_status}}" [rounded]="true" />
+                    <p-tag severity="success"  value="{{user.account_status}}" [rounded]="true" />
                 </td>
             </tr>
         </ng-template>

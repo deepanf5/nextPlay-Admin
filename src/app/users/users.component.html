@@ -48,14 +48,14 @@
         <ng-template pTemplate="body" let-user>
             <tr>
                 <td>{{ user.user_id}}</td>
-                <td>
-                    <p-tag [class]="user.member_ship" severity="info"  [rounded]="true" value="{{user.member_ship}}"/>
-                </td>
+                <td class="{{user.member_ship}}">{{user.member_ship}}</td>
+                <!-- <td class="{{user.user.member_ship}} + capitalize">{{user.member_ship}}</td> -->
                 <td>{{ user.first_name }}</td>
                 <td>{{ user.last_name }}</td>
                 <td>{{ user.email }}</td>
                 <td>{{user.phone_number}}</td>
-                <td> <p-tag [class]="user.account_status" value="{{user.account_status}}" [rounded]="true" /></td>
+                <!-- <td> <p-tag [class]="user.account_status" value="{{user.account_status}}" [rounded]="true" /></td> -->
+                <td class="{{user.account_status}} + capitalize">{{user.account_status}}</td>
             </tr>
         </ng-template>
     </p-table>

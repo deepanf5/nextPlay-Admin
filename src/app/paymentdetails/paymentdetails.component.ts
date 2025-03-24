@@ -94,7 +94,7 @@ export class PaymentdetailsComponent {
             last_name: "Williams",
             email: "bob.williams@example.com",
             phone_number: "+1222333444",
-            paymentMethod:'cerdit card',
+            paymentMethod:'payPal',
             address: {
               street: "321 Pine St",
               city: "Capitol City",
@@ -196,7 +196,7 @@ export class PaymentdetailsComponent {
             last_name: "Rodriguez",
             email: "hank.rodriguez@example.com",
             phone_number: "+1999000111",
-            paymentMethod:'cerdit card',
+            paymentMethod:'payPal',
             address: {
               street: "741 Chestnut St",
               city: "Riverdale",

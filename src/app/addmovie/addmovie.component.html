@@ -1,1 +1,40 @@
-<p>addmovie works!</p>
+<section class="movie">
+    <div class="grid">
+        <div class="col-12 md:col-6 lg:col-6">
+            <form [formGroup]="addMovie">
+                <div class="grid">
+                    <div class="col-12 md:col-6 lg:col-6">
+                        <p-floatLabel>
+                            <input id="movieTitle" class="w20rem" type="text" pInputText  />
+                            <label for="movieTitle">movieTitle</label>
+                        </p-floatLabel>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-6">
+                        <p-dropdown 
+    [options]="genres"
+    optionLabel="name"
+    [showClear]="true" 
+    placeholder="Select a City" 
+    class="ng-dirty ng-invalid" />
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-6">
+                        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-6">
+                        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-6">
+                        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-6">
+                        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-12 md:col-6 lg:col-6">
+
+        </div>
+    </div>
+
+</section>

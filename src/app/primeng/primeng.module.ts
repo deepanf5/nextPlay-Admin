@@ -18,7 +18,8 @@ import { TagModule } from 'primeng/tag';
 import { RatingModule } from 'primeng/rating';
 import { InputIconModule } from 'primeng/inputicon';
 import { IconFieldModule } from 'primeng/iconfield';
-
+import { FloatLabelModule } from 'primeng/floatlabel';
+import { DropdownModule } from 'primeng/dropdown';
 
 
 
@@ -45,7 +46,9 @@ import { IconFieldModule } from 'primeng/iconfield';
     TagModule,
     RatingModule,
     InputIconModule,
-    IconFieldModule
+    IconFieldModule,
+    FloatLabelModule,
+    DropdownModule
     
   ],
   exports:[
@@ -66,7 +69,9 @@ import { IconFieldModule } from 'primeng/iconfield';
     TagModule,
     RatingModule,
     InputIconModule,
-    IconFieldModule
+    IconFieldModule,
+    FloatLabelModule,
+    DropdownModule
 
   ]
 })
