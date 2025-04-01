@@ -1,38 +1,134 @@
 <section class="movie">
     <div class="grid">
-        <div class="col-12 md:col-6 lg:col-6">
+        <div class="col-12 md:col-6 lg:col-6 mt-5">
             <form [formGroup]="addMovie">
                 <div class="grid">
                     <div class="col-12 md:col-6 lg:col-6">
                         <p-floatLabel>
-                            <input id="movieTitle" class="w20rem" type="text" pInputText  />
+                            <input formControlName="movieTitle" id="movieTitle" class="w20rem" type="text" pInputText  />
                             <label for="movieTitle">movieTitle</label>
                         </p-floatLabel>
                     </div>
                     <div class="col-12 md:col-6 lg:col-6">
-                        <p-dropdown 
-    [options]="genres"
-    optionLabel="name"
-    [showClear]="true" 
-    placeholder="Select a City" 
-    class="ng-dirty ng-invalid" />
+                        <p-floatLabel>
+                            <p-dropdown 
+                            [options]="genres"
+                            optionLabel="names"
+                            [showClear]="true" 
+                            formControlName="Genre"
+                            placeholder="Select a City" />
+                            <label for="movieTitle">Genre</label>
+                        </p-floatLabel>
+                    
                     </div>
                     <div class="col-12 md:col-6 lg:col-6">
-                        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
+                        <div class="pt-5">
+                            <p-floatLabel>
+                                <p-calendar formControlName="year" />
+                                <label for="movieTitle">Year</label>
+                            </p-floatLabel>
+                        </div>
                     </div>
                     <div class="col-12 md:col-6 lg:col-6">
-                        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
+                        <div class="pt-5">
+                            <p-floatLabel>
+                                <input  formControlName="directorName" id="directorName" class="w20rem" type="text" pInputText  />
+                                <label for="directorName">Director Name</label>
+                            </p-floatLabel>
+                        </div>
                     </div>
                     <div class="col-12 md:col-6 lg:col-6">
-                        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
+                        <div class="pt-5">
+                            <p-floatLabel>
+                                <input formControlName="moviePoster" (change)="getUrl()" id="moviePoster" class="w20rem" type="text" pInputText  />
+                                <label for="moviePoster">MoviePoster URL</label>
+                            </p-floatLabel>
+                        </div>
                     </div>
                     <div class="col-12 md:col-6 lg:col-6">
-                        <div class="text-center p-3 border-round-sm bg-primary font-bold">col-12 md:col-6 lg:col-3</div>
+                        <div class="pt-5">
+                            <p-floatLabel>
+                                <input formControlName="duration" id="duration" class="w20rem" type="text" pInputText  />
+                                <label for="duration">Duration</label>
+                            </p-floatLabel>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-6">
+                        <div class="pt-5">
+                            <p-floatLabel>
+                                <p-dropdown 
+                                [options]="languages"
+                                optionLabel="lng"
+                                [showClear]="true" 
+                                formControlName="language"
+                                placeholder="language" />
+                                <label for="language">Select a language</label>
+                            </p-floatLabel>
+                        
+                        </div>
+                    </div>
+                    
+                    <div class="col-12 md:col-6 lg:col-6">
+                        <div class="pt-5">
+                            <p-floatLabel>
+                                <input formControlName="trailerUrl" id="trailerUrl" class="w20rem" type="text" pInputText  />
+                                <label for="trailerUrl">TrailerUrl</label>
+                            </p-floatLabel>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-6">
+                        <div class="pt-5">
+                            <p-floatLabel>
+                                <input formControlName="videoUrl" id="videoUrl" class="w20rem" type="text" pInputText  />
+                                <label for="videoUrl">VideoUrl</label>
+                            </p-floatLabel>
+                        </div>
+                    </div>
+                  
+                    <div class="col-12 md:col-6 lg:col-6">
+                        <div class="pt-5">
+
+                            <p-floatLabel>
+                                <textarea 
+                                rows="1"
+                                cols="23" 
+                                pInputTextarea 
+                                formControlName="description"
+                                id="description">
+                            </textarea>
+                            <label for="description">Description</label>
+                            </p-floatLabel>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-6">
+                        <div class="pt-5">
+                            <label for="rating">Rating the movie</label>
+                                <div class="mt-2">
+                                    <p-rating formControlName="rating" [cancel]="false" />
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-12">
+                        <div class="pt-5 text-center">
+                            <p-button (click)="preview()" label="Preview" />
+                        </div>
+                    </div>
+                    <div class="col-12 md:col-6 lg:col-12">
+                        <div class="pt-5 text-center">
+                            <p-button (click)="submit()" label="Submit" />
+                        </div>
                     </div>
                 </div>
             </form>
         </div>
-        <div class="col-12 md:col-6 lg:col-6">
+        <div class="col-12 md:col-6 lg:col-6 text-center">
+            
+<div class="mt-5">
+    <p-image
+    src="https://primefaces.org/cdn/primeng/images/galleria/galleria10.jpg"
+    alt="Image"
+    width="420" />
+</div>
 
         </div>
     </div>

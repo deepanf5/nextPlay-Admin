@@ -1,0 +1,22 @@
+<div class="grid">
+    <div class="col-12 md:col-6 lg:col-6">
+        <p-image 
+        src="https://primefaces.org/cdn/primeng/images/galleria/galleria10.jpg" 
+        alt="Image" 
+        width="250" />
+    </div>
+    <div class="col-12 md:col-6 lg:col-6">
+        <!-- <h2>{{this.movieDetails?.movieTitle}}</h2> -->
+        <header>
+            <h2 class="m-0 capitalize">{{movieDetails?.movieTitle}}<span>{{movieDetails?.Genre?.names}}</span></h2>
+        </header>
+        <main>
+            <h3 class="capitalize">{{movieDetails?.directorName}}</h3> 
+            <span>{{formattedYear}}</span> <span> <i class="pi pi-clock ml-3 mr-1" style="font-size: 0.8rem"></i>{{movieDetails?.duration}}</span>
+            <div class="mt-4">
+                <p-rating [(ngModel)]="value"  [readonly]="true" [cancel]="false" />
+            </div>
+            <p>{{movieDetails?.description}}</p>
+        </main>
+    </div>
+</div>

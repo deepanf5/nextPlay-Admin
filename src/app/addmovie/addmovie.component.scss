@@ -1,9 +1,24 @@
 
 
 :host ::ng-deep.p-dropdown.p-dropdown-clearable .p-dropdown-label {
-    padding-right: 11rem;
+    padding-right: 8rem;
+    width: 17rem;
 }
 
 .p-inputtext {
     padding-right: 7rem;
+}
+
+:host ::ng-deep .p-calendar {
+    width: 19.3rem;
+}
+
+:host ::ng-deep .p-inputnumber-input {
+    width: 19.3rem;
+
+}
+
+:host ::ng-deep .p-button {
+
+    width: 10rem;
 }

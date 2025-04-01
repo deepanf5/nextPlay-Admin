@@ -20,6 +20,12 @@ import { InputIconModule } from 'primeng/inputicon';
 import { IconFieldModule } from 'primeng/iconfield';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { DropdownModule } from 'primeng/dropdown';
+import { CalendarModule } from 'primeng/calendar';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ImageModule } from 'primeng/image';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
+
 
 
 
@@ -48,7 +54,11 @@ import { DropdownModule } from 'primeng/dropdown';
     InputIconModule,
     IconFieldModule,
     FloatLabelModule,
-    DropdownModule
+    DropdownModule,
+    CalendarModule,
+    InputTextareaModule,
+    InputNumberModule,
+    DynamicDialogModule
     
   ],
   exports:[
@@ -71,7 +81,12 @@ import { DropdownModule } from 'primeng/dropdown';
     InputIconModule,
     IconFieldModule,
     FloatLabelModule,
-    DropdownModule
+    DropdownModule,
+    CalendarModule,
+    InputTextareaModule,
+    ImageModule,
+    InputNumberModule,
+    DynamicDialogModule
 
   ]
 })
